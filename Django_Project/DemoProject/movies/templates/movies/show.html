@@ -1,0 +1,27 @@
+<h2>{{movie.title}} Details</h2> 
+<table> 
+    <thead> 
+    </thead> 
+    <tbody> 
+        <tr> 
+            <td><b>Director:</b></td>
+            <td>{{movie.director}}</td> 
+        </tr> 
+        <tr> 
+            <td><b>Releasedate:</b></td> 
+            <td>{{movie.release_date}}</td> 
+        </tr> 
+        <tr> 
+            <td><b>Genre:</b></td> 
+            <td>{{movie.genre}}</td>
+        </tr> 
+        <tr> 
+            <td><b>Duration(min):</b></td> 
+            <td>{{movie.duration}}</td> 
+        </tr> 
+    </tbody> 
+</table>
+
+<p>
+<h3><a href="/movies/{{movie.id}}/edit/">Edit</a></h3> <h3><a href="/movies/{{movie.id}}/delete/">Delete</a></h3>
+</p>

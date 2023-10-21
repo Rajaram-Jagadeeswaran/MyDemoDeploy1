@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h3><header>
+<div class="topnav">
+<a class="active" href="/movies">Home</a> |
+{% if user.is_authenticated %}
+<div> You are signed in as {{user.username}}...
+<a href="{% url 'sign_out' %}">Sign out</a>
+{% else %}
+<a href="{% url 'users:sign_up' %}">Sign up</a>
+<!--<a href="{% url 'users:sign_up' %}">Sign up</a>-->
+{% endif %}
+</div>
+</header>
+</h3>
+<main>
+{% block content %}{% endblock %}
+</main>
+</body>
+</html>

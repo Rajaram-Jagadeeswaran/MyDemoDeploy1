@@ -1,0 +1,15 @@
+<h1>Newest Movies<h1>
+    
+{% if newest_movies %}
+<h2><a href="/movies/new">
+    Create 
+</a></h2>
+    <ul> 
+    {% for movie in newest_movies %}
+        <h2><li><a href="/movies/{{ movie.id }}/">{{ movie.title }}</a></li></h2>
+    {% endfor %}
+    </ul>
+    <h3><a href="{% url 'sign_out' %}">Log out</a></h3>
+{% else %}
+    <p>There are no movies recorded.</p> 
+{% endif %}

@@ -1,0 +1,20 @@
+<!--{% block content %}-->
+<!--<h2>Create a New Movie</h2>-->
+<!--<form method="post">-->
+<!--  {% csrf_token %}-->
+<!--  {{ form.as_p }}-->
+<!--  <a href="/">-->
+    
+<!--  </a>-->
+<!--  <button type="submit">Create</button>-->
+<!--</form>-->
+<!--<a href="{% url 'movies:index' %}">Back to Movie List</a>-->
+<!--{% endblock %}-->
+
+<h2> Create Movie</h2>
+<form method="POST" action="/movies/createmovie/">
+  {% csrf_token %}
+  {{ form.as_p}}
+  <input type="submit" name="Submit"/>
+</form>
+<a href="{% url 'movies:index' %}">Back to Movie List</a>
