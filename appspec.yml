@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /signup.html
+  - source: /index.html
     destination: /home/ubuntu/django-movieApp
 hooks:
   BeforeInstall:
